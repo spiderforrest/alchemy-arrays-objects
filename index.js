@@ -58,7 +58,13 @@ export const getSum = (...rest) => {
 // REQS: use rest parameters
 // getFirstTwoArgs(1, 2, 3, 4, 5) should return [1, 2, [3, 4, 5]]
 // getFirstTwoArgs('a', 'b', 'c', 'd') should return ['a', 'b', ['c', 'd']]
-export const getFirstTwoArgs = () => {}
+export const getFirstTwoArgs = (a, b, ...rest) => {
+  const array = []
+  array.push(a)
+  array.push(b)
+  array.push(rest)
+  return array
+}
 
 // INPUT: an object with the following structure
 // {
@@ -81,7 +87,11 @@ export const getFirstTwoArgs = () => {}
 //    return a NEW object, do not modify the object passed in to the function
 //    use spread operator to create a new object
 
-export const addSneakerCount = () => {}
+export const addSneakerCount = (obj) => {
+  const { shoes } = obj
+  obj.sneakerCount = shoes.length
+  return obj
+}
 
 // INPUT: brands from data.js
 // OUTPUT: the brand names listed

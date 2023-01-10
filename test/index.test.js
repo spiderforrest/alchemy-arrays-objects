@@ -51,12 +51,12 @@ test('getSum should return the sum of inputs', () => {
   expect(getSum(1, 2, 3, 4, 5)).toBe(15)
 })
 
-test.skip('getFirstTwoArgs returns the first two arguments as an array', () => {
+test('getFirstTwoArgs returns the first two arguments as an array', () => {
   expect(getFirstTwoArgs(1, 2, 3, 4, 5)).toStrictEqual([1, 2, [3, 4, 5]])
   expect(getFirstTwoArgs('a', 'b', 'c', 'd')).toStrictEqual(['a', 'b', ['c', 'd']])
 })
 
-test.skip('addSneakerCount should append the sneaker count to the object', () => {
+test('addSneakerCount should append the sneaker count to the object', () => {
   const nike = {
     shoes: ['Air Max', 'Air Force', 'Air Jordan', 'Air Mag', 'Pegasus', 'Kobe'],
     slogan: 'Just Do It',
