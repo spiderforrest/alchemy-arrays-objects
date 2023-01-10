@@ -106,7 +106,6 @@ export const getBrandNames = (obj) => {
 export const totalSneakerCount = (obj) => {
   let total = 0
   for (const [_, brand] of Object.entries(obj)) {
-    console.log(brand)
     total += brand.shoes.length
   }
   return total
