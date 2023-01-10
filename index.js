@@ -88,9 +88,10 @@ export const getFirstTwoArgs = (a, b, ...rest) => {
 //    use spread operator to create a new object
 
 export const addSneakerCount = (obj) => {
+  const newObj = { ...obj }
   const { shoes } = obj
-  obj.sneakerCount = shoes.length
-  return obj
+  newObj.sneakerCount = shoes.length
+  return newObj
 }
 
 // INPUT: brands from data.js
